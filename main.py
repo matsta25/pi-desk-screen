@@ -1,10 +1,29 @@
 import tkinter as tk
 
+import os
+
 from pages.MainView import MainView
 
-if __name__ == "__main__":
-    root = tk.Tk()
-    main = MainView(root)
-    main.pack(side="top", fill="both", expand=True)
-    root.wm_geometry("400x400")
-    root.mainloop()
+ENV = os.getenv('ENV')
+
+
+def quit():
+    global root
+    root.quit()
+
+
+class Main:
+    def __init__(self):
+        root = tk.Tk()
+        main = MainView(root)
+        main.pack(side="top", fill="both", expand=True)
+        root.title("Pi Desk Screen")
+        root.wm_geometry("480x320")
+        if ENV != 'dev':
+            root.attributes('-fullscreen', True)
+            root.config(cursor="none")
+        root.configure(bg='black')
+        root.mainloop()
+
+
+app = Main()
