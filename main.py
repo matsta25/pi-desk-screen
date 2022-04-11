@@ -19,10 +19,10 @@ class Main:
         main.pack(side="top", fill="both", expand=True)
         root.title("Pi Desk Screen")
         root.wm_geometry("480x320")
+        root.configure(bg='black')
         if ENV != 'dev':
             root.attributes('-fullscreen', True)
             root.config(cursor="none")
-        root.configure(bg='black')
         root.mainloop()
 
 
