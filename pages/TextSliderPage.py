@@ -56,7 +56,8 @@ class TextSliderPage(Page):
             "Prawo 45 Głoś potrzebę zmiany, ale nigdy nie reformuj zbyt wiele naraz",
             "Prawo 46 Nigdy nie wydawaj się doskonały",
             "Prawo 47 Nie przekraczaj celu, do jakiego dążyłeś; gdy zwyciężysz, wiedz gdzie się zatrzymać",
-            "Prawo 48 Przyjmij bezkształtną formę"]
+            "Prawo 48 Przyjmij bezkształtną formę"
+        ]
 
         self.canvas = Canvas(self, bg='black', bd=0, highlightthickness=0, relief='ridge')
         self.canvas.pack(fill=BOTH, expand=1)
